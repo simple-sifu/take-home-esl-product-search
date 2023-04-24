@@ -13,20 +13,10 @@
 
 # linting code
 
-- npm init @eslint/config
-
-
-- Get eslint plugin, add this code to your settings.json
-```
- {
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  "eslint.validate": ["javascript"]
- }
- ```
+- Added eslint and prettier plugin to .vscode/settings.json for code formatting
 
 # Postman is a headless browser we can use to test
+
 - collections are stored in server/postman dir
 
 # HTTP Codes

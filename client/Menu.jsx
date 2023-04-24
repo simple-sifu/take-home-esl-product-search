@@ -1,4 +1,19 @@
-export function Menu() {
+import React, { useState } from "react";
+
+export default function Menu() {
+  const [showingSearch, setShowingSearch] = useState(false);
+
+  function showSearchContainer() {
+    console.log("showSearchContainer showingSearch=", showingSearch);
+    setShowingSearch(() => !showingSearch);
+  }
+
+  function onSearch(e) {
+    console.log("searching..... value=", e.target.value);
+  }
+
+  console.log("app: showingSearch=", showingSearch);
+
   return (
     <header className="menu full-screen-header">
       <div className="menu-container">
