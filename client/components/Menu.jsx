@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/menu.scss";
 
 export default function Menu() {
   const [showingSearch, setShowingSearch] = useState(false);
