@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center; 
+  align-items: flex-end; 
 } 
 
 .nav {
@@ -28,16 +28,16 @@ body {
   padding: .5rem 1rem;
 }
 
+.logo {
+  margin: 0;
+}
+
 .nav-top {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
-}
-
-.logo {
-  width: 50px;
 }
 
 .nav-list {
@@ -57,15 +57,20 @@ body {
   color: #CCC;
 }
 
-.title {
-  font-size: 3rem;
-  margin: 0;
+.title1 {
+  margin: 5rem 0px 0px 0px;
+  font-size: 1rem;
+}
+
+.title2 {
+  margin: .3rem 0px 0px 0px;
+  font-size: 1rem;
 }
 
 .sub-title {
-  font-size: 1.5rem;
+  font-size: .5rem;
   margin-top: .3rem;
-  margin-bottom: 1rem;
+  margin-bottom: .3rem;
 }
 
 .btn {
@@ -76,6 +81,7 @@ body {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  font-size: .5rem;
 }
 
 .btn:hover,
