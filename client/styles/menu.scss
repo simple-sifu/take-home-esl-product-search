@@ -5,7 +5,6 @@
 
 $lineHeightForNav: 40px;
 $lineHeightForSearch: 50px;
-$siteWidth: 1280px;
 
 header.menu {
   // ...
@@ -14,16 +13,13 @@ header.menu {
   z-index: 2;
 
   div.menu-container {
-    width: 100%;
     background-color: #040a2b;
-    padding: 0 20px;
-    text-align: left;
 
     div.menu-holder {
-      position: relative;
-      width: 100%;
-      max-width: $siteWidth;
-      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 2rem 0px;
     }
 
     h1 {
@@ -31,13 +27,10 @@ header.menu {
       font-size: 24px;
       line-height: $lineHeightForNav;
       color: white;
-      text-align: left;
-      display: inline-block;
     }
     nav {
-      display: inline-block;
-      margin-left: 60px;
-
+      display: flex;
+      flex-flow: flex-end;
       i {
         color: white;
         line-height: $lineHeightForNav;
