@@ -1,8 +1,29 @@
 .productContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .productCard {
   padding: 20px;
+  width: 200px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px lightgray;
+}
+
+.results {
+  font-family: ano_regular, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.30000001192092896px;
+  line-height: 1.16667;
+}
+
+hr {
+  margin: 1rem 0px 1rem;
+}
+
+span {
+  margin: 0px 5px;
 }
