@@ -1,9 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'client/index.jsx'),
+    main: path.resolve(__dirname, "client/index.jsx"),
   },
   module: {
     rules: [
@@ -15,11 +15,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             // Translates CSS into CommonJS
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
             },
-          }
+          },
         ],
       },
       {
@@ -30,14 +30,14 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             // Translates CSS into CommonJS
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
             },
           },
           {
             // Compiles Sass to CSS
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sourceMap: true,
             },
@@ -48,19 +48,19 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
   resolve: {
-    extensions: ['.jsx', '.js'],
+    extensions: [".jsx", ".js"],
   },
 };

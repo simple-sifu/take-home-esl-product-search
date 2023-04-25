@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require("dotenv-webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { merge } = require("webpack-merge");
@@ -45,5 +46,13 @@ module.exports = merge(commonConfig, {
       filename: "css/main.[contenthash].css",
     }),
     new Dotenv(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "client/assets/products",
+          to: "img/products",
+        },
+      ],
+    }),
   ],
 });
