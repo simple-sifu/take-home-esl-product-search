@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./common/store";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
+import "./styles/main.scss";
 
 function App() {
   return (

@@ -36,8 +36,12 @@ export default function Menu() {
             <a href="#" className="nav-item">
               GOODBYES
             </a>
-            {/* <a href="#" className="nav-item">STORES</a> */}
-            {/* <a href="#" className="nav-item">INSPIRATION</a> */}
+            <a href="#" className="nav-item">
+              STORES
+            </a>
+            <a href="#" className="nav-item">
+              INSPIRATION
+            </a>
 
             <a href="#" onClick={() => showSearchContainer()}>
               <i className="material-icons search">search</i>
