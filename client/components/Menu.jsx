@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import "../styles/menu.scss";
+import ProductSearch from "../Products/ProductSearch";
 
 export default function Menu() {
   const [showingSearch, setShowingSearch] = useState(false);
 
   function showSearchContainer() {
-    console.log("showSearchContainer showingSearch=", showingSearch);
     setShowingSearch(() => !showingSearch);
   }
-
-  function onSearch(e) {
-    console.log("searching..... value=", e.target.value);
-  }
-
-  console.log("app: showingSearch=", showingSearch);
 
   return (
     <header className="menu full-screen-header">
@@ -49,12 +43,10 @@ export default function Menu() {
           </nav>
         </div>
       </div>
-      <div className={(showingSearch ? "showing " : "") + "search-container"}>
-        <input type="text" onChange={(e) => onSearch(e)} />
-        <a href="#" onClick={() => showSearchContainer()}>
-          <i className="material-icons close">close</i>
-        </a>
-      </div>
+      <ProductSearch
+        showingSearch={showingSearch}
+        showSearchContainer={showSearchContainer}
+      />
     </header>
   );
 }
