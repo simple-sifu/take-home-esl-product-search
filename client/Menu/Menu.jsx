@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/menu.scss";
+import "../styles/Menu.scss";
 import ProductSearch from "../Products/ProductSearch";
 
 export default function Menu() {

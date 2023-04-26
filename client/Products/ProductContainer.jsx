@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
 import React from "react";
-import "./productContainer.scss";
+import "../styles/ProductContainer.scss";
 
 export default function ProductContainer() {
   const { isLoading, data, error } = useSelector((state) => state.products);

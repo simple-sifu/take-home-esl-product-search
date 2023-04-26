@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./ProductSlice";
-import "../styles/productSearch.scss";
+import "../styles/ProductSearch.scss";
 import ProductContainer from "./ProductContainer";
 
 export default function ProductSearch({ showingSearch, showSearchContainer }) {

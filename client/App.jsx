@@ -2,8 +2,8 @@ import React from "react";
 // import ProductComponent from "./Products/ProductComponent";
 import { Provider } from "react-redux";
 import store from "./common/store";
-import Menu from "./components/Menu";
-import "./styles/main.scss";
+import Menu from "./Menu/Menu";
+import "./styles/App.scss";
 
 function App() {
   return (
