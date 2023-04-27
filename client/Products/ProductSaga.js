@@ -8,8 +8,9 @@ function* getProductsHandler(action) {
     const products = yield call(() =>
       HttpGateway().get(PRODUCT_URL + action.payload)
     );
-    console.log("products =", products);
+    console.log("ProductSaga: products returned = ", products);
     yield put(getProductsSuccess(products));
+    console.log("ProductSaga: products finally sent to Redux");
   } catch (err) {
     yield put(getProductsFailure(`${err.name}:${err.message}`));
   }

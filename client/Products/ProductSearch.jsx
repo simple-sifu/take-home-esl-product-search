@@ -9,10 +9,11 @@ export default function ProductSearch({ showingSearch, showSearchContainer }) {
   const dispatch = useDispatch();
 
   function onSearch(e) {
+    console.log("ProductSearch: inputvalue=", e.target.value);
     setSearchValue(e.target.value);
     dispatch(getProducts(e.target.value));
   }
-
+  console.log("**** ProductSearch ****");
   return (
     <div className={(showingSearch ? "showing " : "") + "search-container"}>
       <input
