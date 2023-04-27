@@ -2,13 +2,13 @@ import { useSelector } from "react-redux";
 import React from "react";
 import "../styles/ProductContainer.scss";
 
-export default function ProductContainer() {
+export default function ProductContainer({ emptySearchBar }) {
   const { data, error } = useSelector((state) => state.products);
 
   return (
     <React.Fragment>
-      {error && <h3>{error}</h3>}
-      {!error && data.length !== 0 && (
+      {error && <h1>{error}</h1>}
+      {!error && data.length !== 0 && !emptySearchBar && (
         <div>
           <hr />
           <div className="results">

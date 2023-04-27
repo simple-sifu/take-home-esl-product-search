@@ -4,8 +4,10 @@ import ProductSearch from "../Products/ProductSearch";
 
 export default function Menu() {
   const [showingSearch, setShowingSearch] = useState(false);
+  const [searchValue, setSearchValue] = React.useState("");
 
   function showSearchContainer() {
+    setSearchValue("");
     setShowingSearch(() => !showingSearch);
   }
 
@@ -46,6 +48,8 @@ export default function Menu() {
       <ProductSearch
         showingSearch={showingSearch}
         showSearchContainer={showSearchContainer}
+        setSearchValue={setSearchValue}
+        searchValue={searchValue}
       />
     </header>
   );
