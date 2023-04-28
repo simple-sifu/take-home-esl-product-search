@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../styles/Menu.scss";
+import "../styles/NavBar.scss";
 import ProductSearch from "../Products/ProductSearch";
 
-export default function Menu() {
+export default function NavBar() {
   const [showingSearch, setShowingSearch] = useState(false);
   const [searchValue, setSearchValue] = React.useState("");
 

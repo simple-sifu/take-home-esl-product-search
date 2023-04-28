@@ -28,7 +28,10 @@ export default function ProductSearch({
       <a href="#" onClick={() => showSearchContainer()}>
         <i className="material-icons close">close</i>
       </a>
-      <ProductContainer emptySearchBar={emptySearchBar} />
+      <ProductContainer
+        emptySearchBar={emptySearchBar}
+        setEmptySearchBar={setEmptySearchBar}
+      />
     </div>
   );
 }

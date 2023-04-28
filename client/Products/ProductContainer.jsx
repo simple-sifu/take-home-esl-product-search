@@ -1,9 +1,17 @@
 import { useSelector } from "react-redux";
 import React from "react";
 import "../styles/ProductContainer.scss";
+import { Link } from "react-router-dom";
 
-export default function ProductContainer({ emptySearchBar }) {
+export default function ProductContainer({
+  emptySearchBar,
+  setEmptySearchBar,
+}) {
   const { data, error } = useSelector((state) => state.products);
+
+  function closeSearchPanel() {
+    setEmptySearchBar(true);
+  }
 
   return (
     <React.Fragment>
@@ -14,7 +22,9 @@ export default function ProductContainer({ emptySearchBar }) {
           <div className="results">
             Displaying 4 out of {data.length} results.
             <span>
-              <a href="#">See all Results.</a>
+              <Link to="/display" onClick={closeSearchPanel}>
+                See all Results.
+              </Link>
             </span>
           </div>
           <hr />
