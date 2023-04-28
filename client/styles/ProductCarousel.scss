@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px;
 }
 
 .carousel button {
@@ -33,7 +34,7 @@ body {
 }
 
 .carousel img {
-  width: 200px;
+  width: 100px;
   height: 200px;
   object-fit: cover;
   margin: 1rem;

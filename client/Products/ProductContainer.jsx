@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function ProductContainer({
   emptySearchBar,
-  setEmptySearchBar,
+  showSearchContainer,
 }) {
   const { data, error } = useSelector((state) => state.products);
 
   function closeSearchPanel() {
-    setEmptySearchBar(true);
+    showSearchContainer();
   }
 
   return (

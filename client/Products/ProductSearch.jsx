@@ -30,7 +30,7 @@ export default function ProductSearch({
       </a>
       <ProductContainer
         emptySearchBar={emptySearchBar}
-        setEmptySearchBar={setEmptySearchBar}
+        showSearchContainer={showSearchContainer}
       />
     </div>
   );
