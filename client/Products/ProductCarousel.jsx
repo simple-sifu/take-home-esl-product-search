@@ -34,6 +34,11 @@ function ProductCarousel() {
             <p>{product.name}</p>
           </div>
         ))}
+      {!data && (
+        <div>
+          <h1>No Products Found</h1>
+        </div>
+      )}
       <button
         onClick={handleNextClick}
         disabled={startIndex === data.length - 3}

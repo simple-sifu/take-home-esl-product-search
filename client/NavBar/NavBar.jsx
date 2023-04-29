@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/NavBar.scss";
 import ProductSearch from "../Products/ProductSearch";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [showingSearch, setShowingSearch] = useState(false);
@@ -11,11 +12,18 @@ export default function NavBar() {
     setShowingSearch(() => !showingSearch);
   }
 
+  function clearSearchContainer() {
+    setSearchValue("");
+    setShowingSearch(false);
+  }
+
   return (
     <header className="menu full-screen-header">
       <div className="menu-container">
         <div className="menu-holder">
-          <h1>ELC</h1>
+          <Link to="/" onClick={clearSearchContainer}>
+            <h1>ELC</h1>
+          </Link>
           <nav>
             <a href="#" className="nav-item">
               HOLIDAY

@@ -9,10 +9,6 @@ export default function ProductContainer({
 }) {
   const { data, error } = useSelector((state) => state.products);
 
-  function closeSearchPanel() {
-    showSearchContainer();
-  }
-
   return (
     <React.Fragment>
       {error && <h1>{error}</h1>}
@@ -23,7 +19,7 @@ export default function ProductContainer({
             Displaying {data.length > 4 ? 4 : data.length} out of {data.length}{" "}
             results.
             <span>
-              <Link to="/display" onClick={closeSearchPanel}>
+              <Link to="/display" onClick={showSearchContainer}>
                 See all Results.
               </Link>
             </span>
