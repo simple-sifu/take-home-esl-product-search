@@ -9,15 +9,12 @@
 # linting code
 
 - Added eslint and prettier plugin and .eslintrc.js
-- Also added to .vscode/settings.json for code formatting
-
-# Postman is a headless browser we can use to test
-
-- collections are stored in server/postman
+- Also added to .vscode/settings.json for code formatting on save.
 
 # Tests
 
 - jest tests were written for testing of Caching of Search Results
+- provided postman collections(server/postman) for testing node backend.
 - did not write cypress tests due to time.
 - did not have at least 85% test coverage due to time.
 
@@ -25,9 +22,10 @@
 
 - replaced gulpfile
 - allow for webpack use and builds in different environments
-- automatic reloading for changes and openning of webpage
+- added webpack-dev-server for automatic reloading for changes and openning of webpage
 - separating files like scss, js, images.
-- prod mode defaults to minifying builds 
+- prod mode defaults to minifying builds
+- npm start brings up both services for client and server.
 
 # Environment
 
@@ -44,10 +42,14 @@
 
 # State Management
 
-- I chose to use ReduxToolkit and Redux Saga because they are commonly used in most companies.
-- The only reason for using Redux is for large applications for different developers and a need for global state and a common store to keep track of changes using devtools.
-- Using Redux is overkill on such a small project and Context API/useReducer can be used instead.
-- I implemented Context API also
+- I chose to use Redux(ReduxToolkit) and Redux Saga because they are commonly used in most companies but is kinda overkill for this small project.
+- For large apps and different developers Redux provides a global state or a common store to keep track of changes using devtools. This is extremely useful for debugging.
+- I used React.Context to reduce the prop drilling for searchbar.
+
+# Styles
+
+- I could have used styled-components but decided on importing scss file instead.
+- I did not have time to make it responsive.
 
 # Use Cases
 
