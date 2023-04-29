@@ -4,6 +4,7 @@ import ProductContainer from "./ProductContainer";
 import { useSearch } from "../common/ContextProvider";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductSearch() {
   const {
@@ -12,10 +13,10 @@ export default function ProductSearch() {
     searchValue,
     setIsSearchBarEmpty,
     setSearchValue,
-    handleKeyDown,
   } = useSearch();
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsSearchBarEmpty(searchValue.trim() === "" ? true : false);
@@ -24,6 +25,14 @@ export default function ProductSearch() {
   function onSearch(e) {
     setSearchValue(e.target.value);
     dispatch(getProducts(e.target.value));
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      toggleSearchContainer();
+      navigate("/display");
+    }
   }
 
   return (

@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import { useSearch } from "../common/ContextProvider";
 
 export default function NavBar() {
-  const { hideSearchContainer, toggleSearchContainer } = useSearch();
+  const { setSearchValue, setShowingSearch, toggleSearchContainer } =
+    useSearch();
+
+  function hideSearchContainer() {
+    setSearchValue("");
+    setShowingSearch(false);
+  }
 
   return (
     <header className="menu full-screen-header">
