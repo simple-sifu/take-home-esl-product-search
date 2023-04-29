@@ -3,7 +3,7 @@
 - npm install
 - npm start - will bring up both client and server
 - npm build - stores minified build artifact in builds/prod
-- npm build-dev - stores build artifacts in builds/dev
+- npm build-dev - stores build artifacts in builds/dev with sourcemaps
 - npm test - will run jest tests.
 
 # linting code
@@ -29,7 +29,20 @@
 - configured in .env
 - I commented out .gitignore so that you can bring up application. This file should usually not be included in pkg and should be private.
 
-# Use Case
+# Search Hashmap
+
+- used closure on backend to store product keys and values on startup
+- keys are stored to handle single digit searches or queries
+- test was written for this
+
+# State Management
+
+- I chose to use ReduxToolkit and Redux Saga because they are commonly used in most companies.
+- The only reason for using Redux is for large applications for different developers and a need for global state and a common store to keep track of changes using devtools.
+- Using Redux is overkill on such a small project and Context API/useReducer can be used instead.
+- I implemented Context API also
+
+# Use Cases
 
 ---
 
