@@ -7,16 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProductSearch({
   showingSearch,
-  showSearchContainer,
+  toggleSearchContainer,
   searchValue,
   setSearchValue,
 }) {
   const navigate = useNavigate();
-  const [emptySearchBar, setEmptySearchBar] = useState(true);
+  const [isSearchBarEmpty, setIsSearchBarEmpty] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setEmptySearchBar(searchValue.trim() === "" ? true : false);
+    setIsSearchBarEmpty(searchValue.trim() === "" ? true : false);
   }, [searchValue]);
 
   function onSearch(e) {
@@ -27,7 +27,7 @@ export default function ProductSearch({
   function handleKeyDown(e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      showSearchContainer();
+      toggleSearchContainer();
       navigate("/display");
     }
   }
@@ -40,12 +40,12 @@ export default function ProductSearch({
         value={searchValue}
         onKeyDown={handleKeyDown}
       />
-      <a href="#" onClick={() => showSearchContainer()}>
+      <a href="#" onClick={() => toggleSearchContainer()}>
         <i className="material-icons close">close</i>
       </a>
       <ProductContainer
-        emptySearchBar={emptySearchBar}
-        showSearchContainer={showSearchContainer}
+        isSearchBarEmpty={isSearchBarEmpty}
+        toggleSearchContainer={toggleSearchContainer}
       />
     </div>
   );

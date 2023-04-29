@@ -7,12 +7,12 @@ export default function NavBar() {
   const [showingSearch, setShowingSearch] = useState(false);
   const [searchValue, setSearchValue] = React.useState("");
 
-  function showSearchContainer() {
+  function toggleSearchContainer() {
     setSearchValue("");
     setShowingSearch(() => !showingSearch);
   }
 
-  function clearSearchContainer() {
+  function hideSearchContainer() {
     setSearchValue("");
     setShowingSearch(false);
   }
@@ -21,7 +21,7 @@ export default function NavBar() {
     <header className="menu full-screen-header">
       <div className="menu-container">
         <div className="menu-holder">
-          <Link to="/" onClick={clearSearchContainer}>
+          <Link to="/" onClick={hideSearchContainer}>
             <h1>ELC</h1>
           </Link>
           <nav>
@@ -47,7 +47,7 @@ export default function NavBar() {
               INSPIRATION
             </a>
 
-            <a href="#" onClick={() => showSearchContainer()}>
+            <a href="#" onClick={() => toggleSearchContainer()}>
               <i className="material-icons search">search</i>
             </a>
           </nav>
@@ -55,7 +55,7 @@ export default function NavBar() {
       </div>
       <ProductSearch
         showingSearch={showingSearch}
-        showSearchContainer={showSearchContainer}
+        toggleSearchContainer={toggleSearchContainer}
         setSearchValue={setSearchValue}
         searchValue={searchValue}
       />

@@ -4,22 +4,22 @@ import "../styles/ProductContainer.scss";
 import { Link } from "react-router-dom";
 
 export default function ProductContainer({
-  emptySearchBar,
-  showSearchContainer,
+  isSearchBarEmpty,
+  toggleSearchContainer,
 }) {
   const { data, error } = useSelector((state) => state.products);
 
   return (
     <React.Fragment>
       {error && <h1>{error}</h1>}
-      {!error && data.length !== 0 && !emptySearchBar && (
+      {!error && data.length !== 0 && !isSearchBarEmpty && (
         <div>
           <hr />
           <div className="results">
             Displaying {data.length > 4 ? 4 : data.length} out of {data.length}{" "}
             results.
             <span>
-              <Link to="/display" onClick={showSearchContainer}>
+              <Link to="/display" onClick={toggleSearchContainer}>
                 See all Results.
               </Link>
             </span>
