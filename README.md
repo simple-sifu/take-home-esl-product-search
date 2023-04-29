@@ -1,50 +1,35 @@
-# tutorial-nodejs
-
-# Header
-
-- content
-- cookies
-- auth
-
 # Setup
 
-- npm init -y
-- npm install --D nodemon
+- npm install
+- npm start - will bring up both client and server
+- npm build - stores minified build artifact in builds/prod
+- npm build-dev - stores build artifacts in builds/dev
+- npm test - will run jest tests.
 
 # linting code
 
-- Added eslint and prettier plugin to .vscode/settings.json for code formatting
+- Added eslint and prettier plugin
+- Also added to .vscode/settings.json for code formatting
 
 # Postman is a headless browser we can use to test
 
-- collections are stored in server/postman dir
+- collections are stored in server/postman
 
-# HTTP Codes
+# Tests
 
-## 2.xx Success
+- jest tests were written for Caching of Search Results
 
-- 200 - Success
-- 201 - Created, new insert in db.
-- 204 - No content, delete request and return nothing.
+# Webpack
 
-## 3.xx Redirection - something is moved
+- replaced gulpfile
+- allow for webpack use and builds in different environments
 
-- 304 - not modified - Get request but nothing is changed on server
+# Environment
 
-## 4.xx Client Error - clients fault
+- configured in .env and by using dotenv library
 
-- 400 - Bad Request - submitted a form with bad email. Did not give what was needed to be successful
-- 401 - Unauthorized - no access, trying to access something, that requires a login authentication
-- 404 - Not Found - not there
+# Search Bar
 
-## 5.xx Server Error
-
-- 500 - Internal Server Error
-
-## Restful API Standards
-
-- GET /todos (Get all)
-- GET /todos/1 (Get a todo with id=1)
-- POST /todos (Add a todo)
-- PUT /todos/1 (Update todo with id=1)
-- DELETE /todos/1 (Delete todo with id=1)
+- a single character on search bar may show 4 different types of products.
+- press return when you have products will show carousel of products on display page.
+- click ELC will bring you back to home page.
