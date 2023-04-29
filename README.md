@@ -43,6 +43,7 @@
    1. click See all Results link will send you the carousel of products on display page.
    2. press return on search bar when it shows products.
 ![image](https://user-images.githubusercontent.com/36891099/235282758-8955117b-bed4-4449-ac24-9c73d22c4a62.png)
+![image](https://user-images.githubusercontent.com/36891099/235282855-0fb31454-81da-4312-93a9-489656f3f00d.png)
 
 
 ## click ELC icon on the top left corner on the navbar will bring you back to home page.
