@@ -21,7 +21,6 @@ function ProductCarousel() {
     setStartIndex(Math.min(startIndex + 1, data.length - 3));
   };
 
-  console.log("data.length =", data.length);
   return (
     <div className="carousel">
       <button onClick={handlePrevClick} disabled={startIndex === 0}>
@@ -29,7 +28,7 @@ function ProductCarousel() {
       </button>
       {data.length > 0 &&
         data.slice(startIndex, endIndex).map((product) => (
-          <div key={product.name}>
+          <div className="product-card" key={product.name}>
             <img src={product.picture} alt={product.name} />
             <p>{product.name}</p>
           </div>
