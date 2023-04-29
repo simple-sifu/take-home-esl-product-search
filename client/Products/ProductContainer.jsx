@@ -2,11 +2,10 @@ import { useSelector } from "react-redux";
 import React from "react";
 import "../styles/ProductContainer.scss";
 import { Link } from "react-router-dom";
+import { useSearch } from "../common/ContextProvider";
 
-export default function ProductContainer({
-  isSearchBarEmpty,
-  toggleSearchContainer,
-}) {
+export default function ProductContainer() {
+  const { isSearchBarEmpty, toggleSearchContainer } = useSearch();
   const { data, error } = useSelector((state) => state.products);
 
   return (

@@ -1,21 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/NavBar.scss";
 import ProductSearch from "../Products/ProductSearch";
 import { Link } from "react-router-dom";
+import { useSearch } from "../common/ContextProvider";
 
 export default function NavBar() {
-  const [showingSearch, setShowingSearch] = useState(false);
-  const [searchValue, setSearchValue] = React.useState("");
-
-  function toggleSearchContainer() {
-    setSearchValue("");
-    setShowingSearch(() => !showingSearch);
-  }
-
-  function hideSearchContainer() {
-    setSearchValue("");
-    setShowingSearch(false);
-  }
+  const { hideSearchContainer, toggleSearchContainer } = useSearch();
 
   return (
     <header className="menu full-screen-header">
@@ -53,12 +43,7 @@ export default function NavBar() {
           </nav>
         </div>
       </div>
-      <ProductSearch
-        showingSearch={showingSearch}
-        toggleSearchContainer={toggleSearchContainer}
-        setSearchValue={setSearchValue}
-        searchValue={searchValue}
-      />
+      <ProductSearch />
     </header>
   );
 }

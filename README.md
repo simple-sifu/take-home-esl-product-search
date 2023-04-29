@@ -17,23 +17,30 @@
 
 # Tests
 
-- jest tests were written for Caching of Search Results
+- jest tests were written for testing of Caching of Search Results
+- did not write cypress tests due to time.
+- did not have at least 85% test coverage due to time.
 
 # Webpack
 
 - replaced gulpfile
 - allow for webpack use and builds in different environments
+- automatic reloading for changes and openning of webpage
+- separating files like scss, js, images.
+- prod mode defaults to minifying builds 
 
 # Environment
 
 - configured in .env
 - I commented out .gitignore so that you can bring up application. This file should usually not be included in pkg and should be private.
+- did not implement docker due to time.
 
 # Search Hashmap
 
 - used closure on backend to store product keys and values on startup
 - keys are stored to handle single digit searches or queries
 - test was written for this
+- if data is larger I would explore the use of tries data structure similar to Google search.
 
 # State Management
 

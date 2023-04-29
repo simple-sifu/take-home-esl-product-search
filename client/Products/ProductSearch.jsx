@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getProducts } from "./ProductSlice";
+import React, { useEffect } from "react";
 import "../styles/ProductSearch.scss";
 import ProductContainer from "./ProductContainer";
-import { useNavigate } from "react-router-dom";
+import { useSearch } from "../common/ContextProvider";
+import { useDispatch } from "react-redux";
+import { getProducts } from "./ProductSlice";
 
-export default function ProductSearch({
-  showingSearch,
-  toggleSearchContainer,
-  searchValue,
-  setSearchValue,
-}) {
-  const navigate = useNavigate();
-  const [isSearchBarEmpty, setIsSearchBarEmpty] = useState(true);
+export default function ProductSearch() {
+  const {
+    showingSearch,
+    toggleSearchContainer,
+    searchValue,
+    setIsSearchBarEmpty,
+    setSearchValue,
+    handleKeyDown,
+  } = useSearch();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,14 +24,6 @@ export default function ProductSearch({
   function onSearch(e) {
     setSearchValue(e.target.value);
     dispatch(getProducts(e.target.value));
-  }
-
-  function handleKeyDown(e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      toggleSearchContainer();
-      navigate("/display");
-    }
   }
 
   return (
@@ -43,10 +37,7 @@ export default function ProductSearch({
       <a href="#" onClick={() => toggleSearchContainer()}>
         <i className="material-icons close">close</i>
       </a>
-      <ProductContainer
-        isSearchBarEmpty={isSearchBarEmpty}
-        toggleSearchContainer={toggleSearchContainer}
-      />
+      <ProductContainer />
     </div>
   );
 }
