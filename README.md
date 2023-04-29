@@ -30,21 +30,22 @@
 
 # Use Case
 
-## load home page
+## 1. load home page
 ![Screen Shot 2023-04-28 at 11 55 50 PM](https://user-images.githubusercontent.com/36891099/235282541-c74f7e06-d9de-4e8a-95bd-048d5b773eb6.png)
 
-## select magnifier glass on far right corner
+## 2. select magnifier glass on far right corner
 ![image](https://user-images.githubusercontent.com/36891099/235282559-0cbf3c5d-60bb-48cd-8d9f-8c53a217df72.png)
 
-## single character like 'd' on search bar may show 4 different types of products.
+## 3. single character like 'd' on search bar may show 4 different types of products.
 ![image](https://user-images.githubusercontent.com/36891099/235282577-f741441e-0fa9-4cb4-b334-d041e99a235f.png)
 
-## The following selections will send you to the display Carousel page:
+## 4. The following selections will send you to the display Carousel page:
    1. click See all Results link will send you the carousel of products on display page.
    2. press return on search bar when it shows products.
 ![image](https://user-images.githubusercontent.com/36891099/235282758-8955117b-bed4-4449-ac24-9c73d22c4a62.png)
-![image](https://user-images.githubusercontent.com/36891099/235282855-0fb31454-81da-4312-93a9-489656f3f00d.png)
 
+## 5. Product Carousel
+![image](https://user-images.githubusercontent.com/36891099/235282883-1163fb0d-e105-4400-a782-9b8b65846bb9.png)
 
-## click ELC icon on the top left corner on the navbar will bring you back to home page.
+## 6. click ELC icon on the top left corner on the navbar will bring you back to home page.
 
