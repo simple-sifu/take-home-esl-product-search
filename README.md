@@ -28,8 +28,9 @@
 
 - configured in .env and by using dotenv library
 
-# Search Bar
-
-- a single character on search bar may show 4 different types of products.
+# Use Case
+- load home page
+- select magnifier glass
+- a single character like 'd' on search bar may show 4 different types of products.
 - press return when you have products will show carousel of products on display page.
 - click ELC will bring you back to home page.
