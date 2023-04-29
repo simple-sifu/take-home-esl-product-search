@@ -20,7 +20,8 @@ export default function ProductContainer({
         <div>
           <hr />
           <div className="results">
-            Displaying 4 out of {data.length} results.
+            Displaying {data.length > 4 ? 4 : data.length} out of {data.length}{" "}
+            results.
             <span>
               <Link to="/display" onClick={closeSearchPanel}>
                 See all Results.

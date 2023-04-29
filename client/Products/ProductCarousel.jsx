@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 function ProductCarousel() {
   const [startIndex, setStartIndex] = useState(0);
   const [data, error] = useSelector((state) => [state.products.data]);
-  console.log("ProductCarousel -> data", data, ", data.length =", data.length);
+
   const endIndex = startIndex + 3;
 
   const handlePrevClick = () => {
@@ -26,9 +26,10 @@ function ProductCarousel() {
       <button onClick={handlePrevClick} disabled={startIndex === 0}>
         Prev
       </button>
-      {data.length > 0 &&
+      {!error &&
+        data &&
         data.slice(startIndex, endIndex).map((product) => (
-          <div className="product-card" key={product.name}>
+          <div className="product-card" key={product._id}>
             <img src={product.picture} alt={product.name} />
             <p>{product.name}</p>
           </div>
