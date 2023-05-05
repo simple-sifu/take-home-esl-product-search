@@ -1,7 +1,7 @@
 import "../styles/ProductCarousel.scss";
 import React, { useState } from "react";
 
-function Carousel({ data, error }) {
+function Carousel({ data }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const endIndex = startIndex + 3;
@@ -19,14 +19,12 @@ function Carousel({ data, error }) {
       <button onClick={handlePrevClick} disabled={startIndex === 0}>
         Prev
       </button>
-      {!error &&
-        data &&
-        data.slice(startIndex, endIndex).map((product) => (
-          <div className="product-card" key={product._id}>
-            <img src={product.picture} alt={product.name} />
-            <p>{product.name}</p>
-          </div>
-        ))}
+      {data.slice(startIndex, endIndex).map((product) => (
+        <div className="product-card" key={product._id}>
+          <img src={product.picture} alt={product.name} />
+          <p>{product.name}</p>
+        </div>
+      ))}
       <button
         onClick={handleNextClick}
         disabled={startIndex === data.length - 3}

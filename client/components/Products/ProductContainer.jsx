@@ -7,13 +7,15 @@ import { useState } from "react";
 
 export default function ProductContainer({ searchTerms }) {
   const [dataReturned, setDataReturned] = useState([]);
+
   const searchValue = searchTerms ? searchTerms : "";
   const Product_API_URL =
     process.env.REACT_APP_PRODUCT_API_CONFIG + searchValue;
   const { data, error } = useFetch(Product_API_URL);
+
   const { isSearchBarEmpty, toggleSearchContainer, setData, setError } =
     useSearch();
-  console.log("ProductContainer data=", data);
+
   React.useEffect(() => {
     if (data?.data) {
       setData(data.data);
