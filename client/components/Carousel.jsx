@@ -1,10 +1,9 @@
 import "../styles/ProductCarousel.scss";
 import React, { useState } from "react";
 
-function ProductCarousel({ data, error }) {
+function Carousel({ data, error }) {
   const [startIndex, setStartIndex] = useState(0);
 
-  console.log("ProductCarousel:data", data);
   const endIndex = startIndex + 3;
 
   const handlePrevClick = () => {
@@ -38,4 +37,4 @@ function ProductCarousel({ data, error }) {
   );
 }
 
-export default ProductCarousel;
+export default Carousel;

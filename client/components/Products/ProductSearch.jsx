@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/ProductSearch.scss";
 import ProductContainer from "./ProductContainer";
-import { useSearch } from "../context/SearchContextProvider";
+import { useSearch } from "../../context/SearchContextProvider";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductSearch() {

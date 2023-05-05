@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import React from "react";
 import "../styles/ProductContainer.scss";
 import { Link } from "react-router-dom";
-import { useSearch } from "../context/SearchContextProvider";
-import useFetch from "../hooks/useFetch";
+import { useSearch } from "../../context/SearchContextProvider";
+import useFetch from "../../hooks/useFetch";
 import { useState, useEffect } from "react";
 
 export default function ProductContainer({ searchTerms }) {
