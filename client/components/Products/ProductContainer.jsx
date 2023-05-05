@@ -32,9 +32,9 @@ export default function ProductContainer({ searchTerms }) {
           <div>
             <hr />
             <div className="results">
-              Displaying {dataReturned.length > 4 ? 4 : dataReturned.length} out
-              of {dataReturned.length}
-              results.
+              {`Displaying ${
+                dataReturned.length > 4 ? 4 : dataReturned.length
+              } out of ${dataReturned.length} results.`}
               <span>
                 <Link to="/display" onClick={toggleSearchContainer}>
                   See all Results.
