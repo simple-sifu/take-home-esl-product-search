@@ -6,7 +6,7 @@ export const useSearch = () => {
   return useContext(SearchContext);
 };
 
-export const ContextProvider = ({ children }) => {
+export const SearchContextProvider = ({ children }) => {
   const [showingSearch, setShowingSearch] = useState(false);
   const [searchValue, setSearchValue] = React.useState("");
   const [isSearchBarEmpty, setIsSearchBarEmpty] = useState(true);
@@ -19,9 +19,6 @@ export const ContextProvider = ({ children }) => {
     setShowingSearch(() => !showingSearch);
   }
 
-  if (data?.data) {
-    console.log("ContextProvider: data =", data?.data);
-  }
   return (
     <SearchContext.Provider
       value={{
