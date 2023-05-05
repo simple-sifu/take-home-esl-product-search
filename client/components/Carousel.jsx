@@ -1,11 +1,10 @@
 import "../styles/ProductCarousel.scss";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 
-function ProductCarousel() {
+function ProductCarousel({ data, error }) {
   const [startIndex, setStartIndex] = useState(0);
-  const [data, error] = useSelector((state) => [state.products.data]);
 
+  console.log("ProductCarousel:data", data);
   const endIndex = startIndex + 3;
 
   const handlePrevClick = () => {
@@ -29,11 +28,6 @@ function ProductCarousel() {
             <p>{product.name}</p>
           </div>
         ))}
-      {!data && (
-        <div>
-          <h1>No Products Found</h1>
-        </div>
-      )}
       <button
         onClick={handleNextClick}
         disabled={startIndex === data.length - 3}

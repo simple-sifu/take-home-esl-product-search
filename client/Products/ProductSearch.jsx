@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/ProductSearch.scss";
 import ProductContainer from "./ProductContainer";
-import { useSearch } from "../common/ContextProvider";
-import { useDispatch } from "react-redux";
-import { getProducts } from "./ProductSlice";
+import { useSearch } from "../context/SearchContextProvider";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductSearch() {
@@ -15,7 +13,6 @@ export default function ProductSearch() {
     setSearchValue,
   } = useSearch();
 
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,7 +21,6 @@ export default function ProductSearch() {
 
   function onSearch(e) {
     setSearchValue(e.target.value);
-    dispatch(getProducts(e.target.value));
   }
 
   function handleKeyDown(e) {
@@ -46,7 +42,7 @@ export default function ProductSearch() {
       <a href="#" onClick={() => toggleSearchContainer()}>
         <i className="material-icons close">close</i>
       </a>
-      <ProductContainer />
+      {searchValue && <ProductContainer searchTerms={searchValue} />}
     </div>
   );
 }

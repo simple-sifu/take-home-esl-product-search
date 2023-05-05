@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/NavBar.scss";
 import ProductSearch from "../Products/ProductSearch";
 import { Link } from "react-router-dom";
-import { useSearch } from "../common/ContextProvider";
+import { useSearch } from "../context/SearchContextProvider";
 
 export default function NavBar() {
   const { setSearchValue, setShowingSearch, toggleSearchContainer } =

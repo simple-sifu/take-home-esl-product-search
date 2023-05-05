@@ -1,10 +1,8 @@
-import ProductCarousel from "../Products/ProductCarousel";
+import ProductCarousel from "../components/Carousel";
 import React from "react";
+import { useSearch } from "../context/SearchContextProvider";
 
 export default function Display() {
-  return (
-    <div>
-      <ProductCarousel />
-    </div>
-  );
+  const { data, error } = useSearch();
+  return <div>{!error && <ProductCarousel data={data} error={error} />}</div>;
 }

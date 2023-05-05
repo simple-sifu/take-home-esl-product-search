@@ -1,27 +1,22 @@
 import React from "react";
-import { Provider } from "react-redux";
-import store from "./common/store";
 import NavBar from "./NavBar/NavBar";
 import Home from "./Pages/Home";
 import Display from "./Pages/Display";
 import "./styles/App.scss";
 import { Route, Routes } from "react-router-dom";
-import { ContextProvider } from "./common/ContextProvider";
+import { ContextProvider } from "./context/SearchContextProvider";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <ContextProvider>
-          <NavBar />
-        </ContextProvider>
-
+    <div className="App">
+      <ContextProvider>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/display" element={<Display />} />
         </Routes>
-      </div>
-    </Provider>
+      </ContextProvider>
+    </div>
   );
 }
 export default App;
