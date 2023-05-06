@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 const Header = styled.header`
   width: 100%;
-
   position: relative;
   z-index: 2;
 `;
@@ -66,7 +65,7 @@ export default function NavBar() {
   }
 
   return (
-    <header className="menu full-screen-header">
+    <Header className="menu full-screen-header">
       <MenuContainer>
         <MenuHolder>
           <Link to="/" onClick={hideSearchContainer}>
@@ -88,6 +87,6 @@ export default function NavBar() {
         </MenuHolder>
       </MenuContainer>
       <ProductSearch />
-    </header>
+    </Header>
   );
 }
