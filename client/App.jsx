@@ -2,13 +2,20 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./Pages/Home";
 import Display from "./Pages/Display";
-import "./styles/App.scss";
 import { Route, Routes } from "react-router-dom";
 import { SearchContextProvider } from "./context/SearchContextProvider";
+import styled from "styled-components";
+
+const Container = styled.div`
+  margin: 0;
+  font-family: Cambria;
+  color: #1b2522;
+  box-sizing: border-box;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <SearchContextProvider>
         <NavBar />
         <Routes>
@@ -16,7 +23,7 @@ function App() {
           <Route path="/display" element={<Display />} />
         </Routes>
       </SearchContextProvider>
-    </div>
+    </Container>
   );
 }
 export default App;
