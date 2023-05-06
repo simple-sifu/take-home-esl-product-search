@@ -42,14 +42,18 @@
 
 # State Management
 
-- I chose to use Redux(ReduxToolkit) and Redux Saga because they are commonly used in most companies but is kinda overkill for this small project.
-- For large apps and different developers Redux provides a global state or a common store to keep track of changes using devtools. This is extremely useful for debugging.
-- I used React.Context to reduce the prop drilling for searchbar.
+- I chose NOT to use Redux(ReduxToolkit) and Redux Saga because they are commonly used in most companies but is kinda overkill for this small project. Also global state is bad. It doesnt promote encapsulation of properties.
+- For large apps and different developers Redux provides a global state or a common store to keep track of changes using devtools. This is extremely useful for debugging, but not good for component based development(as stated in prev statement)
+- I used React.Context to reduce the prop drilling. Also created a custom useFetch hook
+to work with useContext
 
 # Styles
 
-- I could have used styled-components but decided on importing scss file instead.
+- I used styled-components to prevent css selector conflicts in the future.
 - I did not have time to make it responsive.
+
+# API
+- url is versioned initially to v1, ie. http://localhost:8080/api/v1/products/
 
 # Use Cases
 
