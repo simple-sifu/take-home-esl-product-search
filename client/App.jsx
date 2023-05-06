@@ -5,6 +5,7 @@ import Display from "./Pages/Display";
 import { Route, Routes } from "react-router-dom";
 import { SearchContextProvider } from "./context/SearchContextProvider";
 import styled from "styled-components";
+import "./styles/App.scss";
 
 const Container = styled.div`
   margin: 0;

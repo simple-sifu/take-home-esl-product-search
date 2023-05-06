@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import "../../styles/ProductSearch.scss";
-import ProductContainer from "./ProductContainer";
+import ProductDisplay from "./ProductDisplay";
 import { useSearch } from "../../context/SearchContextProvider";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +41,7 @@ export default function ProductSearch() {
       <a href="#" onClick={() => toggleSearchContainer()}>
         <i className="material-icons close">close</i>
       </a>
-      {searchValue && <ProductContainer searchTerms={searchValue} />}
+      {searchValue && <ProductDisplay searchTerms={searchValue} />}
     </div>
   );
 }
