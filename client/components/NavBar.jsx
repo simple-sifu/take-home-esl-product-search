@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/NavBar.scss";
+import "../styles/SearchContainer.scss";
 import ProductSearch from "./Products/ProductSearch";
 import { Link } from "react-router-dom";
 import { useSearch } from "../context/SearchContextProvider";
